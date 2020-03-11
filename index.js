@@ -76,15 +76,10 @@ function temperatureCtoF(celsiusTemp) {
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
 function temperatureInF(temp, unit) {
-  // const fahrenheitTemp = ((temp * 9)/5) + 32;
-  // unit: () => {
-  //   if (unit = "F") {
-  //     return Math.round(fahrenheitTemp) + "F"
-  //   } else {
-  //     return Math.round(temp) + "C"
-  //   }
-  // }
-  
+  if(unit == 'C') {
+    return temperatureCtoF(temp) + "F";
+  }
+  return Math.round(temp) + unit
 }
 
 
@@ -146,12 +141,11 @@ function getName({name}) {
  * the returned value should be: 2.
 */
 function appleIndex(arr) {
-  const appleArr = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] = "apple") {
-      appleArr.push(arr[i]);
+    if (arr[i] == "apple") {
+      return i
     }
-  } return appleArr;
+  } 
 }
 
 /**
@@ -170,14 +164,14 @@ function appleIndex(arr) {
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(arr) {
-  const isAnApple = [];
+  const isApple = [];
   for(let i = 0; i < arr.length; i++) {
-    if(arr[i] = "apple") {
-      return true
+    if(arr[i] =='apple') {
+      isApple.push(true);
     } else {
-      return false
+      isApple.push(false);
     }
-  }
+  } return isApple;
 }
 
 
