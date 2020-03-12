@@ -229,7 +229,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  return `This is a ${inventory[index].car_make} ${inventory[index].car}`
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`
 }
 
 /**
@@ -244,9 +244,9 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-  const lastCar = []
+  const lastCar = [];
   for (let i = 0; i < inventory.length; i++) {
-    lastCar[i] = inventory[i].car_make, inventory[i].car_model
+    lastCar[i] = inventory[i].car_make, inventory[i].car_model;
   }
   return lastCar;
 }
@@ -282,7 +282,7 @@ function getModelYears(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(inventory, carId) {
   /* code here */
 }
 
